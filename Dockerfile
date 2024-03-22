@@ -12,7 +12,7 @@ RUN npm run build
 
 
 
-ENV NUXT_HOST=0.0.0.0
+
 
 
 

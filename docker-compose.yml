@@ -1,0 +1,35 @@
+ nginx_frontend:
+    image: nginx:1.17.6-alpine
+    #container_name: nginx_frontend
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+    ports:
+      - '80:80'
+    #depends_on:
+     # - frontend
+    # ports:
+    #    - "3000:80"
+    restart: always
+    networks:
+      - main
+
+  torch-frontend:
+    # build:
+    #   context: ./docker/sercet_frontend/
+    #   dockerfile: Dockerfile
+    image: 
+    container_name: frontend
+    # ports:
+    #   - 80:80
+    # volumes:
+    #   - ./frontend:/var/www
+
+    command: "npm run start"
+      # - ./docker/frontend/nginx:/etc/nginx/conf.d/
+    networks:
+      - main
+      
+  networks:
+  main:
+    name: main
+    driver: bridge
