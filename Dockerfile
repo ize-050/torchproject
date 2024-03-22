@@ -24,7 +24,7 @@ WORKDIR /var/www/nuxt-app_1
 ENV NODE_ENV production
 
 COPY --from=builder /var/www/nuxt-app_1/ ./
-COPY --from=builder /var/www/nuxt-app_1/.nuxt ./.nuxt
+COPY --from=builder /var/www/nuxt-app_1/.next ./.next
 COPY --from=builder  /var/www/nuxt-app_1/node_modules ./node_modules
 COPY --from=builder /var/www/nuxt-app_1/package.json ./package.json
 EXPOSE 80
