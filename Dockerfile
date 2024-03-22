@@ -31,7 +31,7 @@ COPY --from=builder /news_katsan_backoffice_V1/.env ./.env
 #COPY --from=builder /backoffice/.env.local ./.env.local
 COPY --from=builder /news_katsan_backoffice_V1/package.json ./package.json
 COPY --from=builder /news_katsan_backoffice_V1/next.config.js ./next.config.js
-COPY --from=builder /news_katsan_backoffice_V1/next-i18next.config.ts ./next-i18next.config.ts
+
 
 EXPOSE 80
 
