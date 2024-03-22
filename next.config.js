@@ -4,7 +4,7 @@
 //  * @type {import('next').NextConfig}
 //  * **/
 module.exports  = {
-    output: 'export',
+    
     images: {
         domains: ['127.0.0.1','localhost','https://front.testtourchpro.com','https://testtourchpro.com'], // Add the hostname here
       },
