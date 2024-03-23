@@ -48,17 +48,15 @@ const Home = () => {
   }, [Product])
   return (
     <>
-      <div className="page-slider margin-bottom-35">
+      <div className="page-slider">
         <div id="carousel-example-generic" className="carousel slide carousel-slider" data-ride="carousel">
           <ol className="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
           </ol>
           <div className="carousel-inner" role="listbox">
             <div className="item active">
-              <img src="/slider3.jpg" style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} alt="First slide" height="400px" />
+              <img src="/slider3.jpg" alt="text" />
 
             </div>
             <div className="item">
@@ -81,19 +79,17 @@ const Home = () => {
       }}>
         <div className="container">
           <div className="row margin-bottom-40">
-            <div className="col-md-12 sale-product">
+            <div className="col-md-12  sale-product">
               <h2 style={{
                 fontFamily: "Kanit"
               }}>สินค้าของเรา</h2>
 
-              <div className="owl-carousel owl-carousel5">
+              <div className="owl-carousel owl-carousel5 ">
                 {Product.map((product: any, key) => {
                   return (
-                    <div key={key} className="col-md-3">
+                    <div key={key} className="col-md-3 col-xs-6">
                       <div className="product-item">
-                        <div className="pi-img-wrapper" style={{
-                          textAlign: 'center',
-                        }}>
+                        <div className="pi-img-wrapper">
                           <Image src={product.images} className="img-responsive" alt="Berry Lace Dress" width="200" height="100" />
                           <div>
                             <a href="p3.jpg" className="btn btn-default fancybox-button">Zoom</a>
@@ -122,9 +118,7 @@ const Home = () => {
                   return (
                     <div key={key} className="col-md-6">
                       <div className="product-item">
-                        <div className="pi-img-wrapper" style={{
-                          textAlign: "center",
-                        }}>
+                        <div className="pi-img-wrapper">
                           <Image src={product.images} className="img-responsive" alt="Berry Lace Dress" width="200" height="100" />
                           <div>
                             <a href="p3.jpg" className="btn btn-default fancybox-button">Zoom</a>

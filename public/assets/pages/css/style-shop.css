@@ -384,7 +384,8 @@ Header and header elements
 	right: 0;
 }
 .pi-img-wrapper {
-	height: 200px;
+	text-align:  -webkit-center;
+	/* height: 200px; */
 	position: relative;
 }
 .pi-img-wrapper div {

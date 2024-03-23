@@ -72,13 +72,10 @@ const ProductList = ({params}:any) => {
           <div className="row product-list">
             {Product.map((product: any, key: number) => {
               return (
-                <div className="col-md-3 col-sm-6 col-xs-12" key={key}>
+                <div className="col-md-3 col-sm-6 col-xs-6" key={key}>
                   <div className="product-item col-md-12 sale-product">
-                    <div className="pi-img-wrapper " style={{
-                      textAlign:'center'
-                    }}>
-                      <img src={product.images} className="img-responsive" alt="Berry Lace Dress" width={150}
-                        height={150} />
+                    <div className="pi-img-wrapper">
+                      <img src={product.images} className="img-responsive" alt="Berry Lace Dress"  />
                       <div>
                         <a href='./p3.jpg' className="btn btn-default fancybox-button" data-fancybox="gallery">Zoom</a>
                         <a href="javascript:void(0)"

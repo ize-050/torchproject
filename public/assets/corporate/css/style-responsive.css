@@ -564,9 +564,9 @@
 	.product-page-options .pull-left {
 		margin-bottom: 0;
 	}
-	.product-item .img-responsive {
+	/* .product-item .img-responsive {
 		width: 100%;
-	}
+	} */
 	.pagination {
 		float: left !important;
 		padding-top: 10px;
