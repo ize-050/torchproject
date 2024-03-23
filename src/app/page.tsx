@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 import axios from 'axios';
 import { get } from "http";
+import { headers } from "next/headers";
 const Home = () => {
   const router = useRouter();
   const [Product, setProduct] = useState([]);
@@ -15,7 +16,12 @@ const Home = () => {
 
   useEffect(() => {
     const getMenus = async () => {
-      const product = await axios.get('http://testtourchpro.com/api/getAllproduct')
+      const product = await axios.get('http://testtourchpro.com/api/getAllproduct',{
+      headers:{
+        'Access-Control-Allow-Origin': '*',
+      },
+    }
+      )
       const products = product.data;
       if (products.length > 0) {
         setProduct(products);
@@ -151,11 +157,11 @@ const Home = () => {
                     </ol>
                     <div className="carousel-inner">
                       <div className="item active">
-                        <Image
+                        {/* <Image
                           width={600}
                           height={500}
                           alt="test"
-                          src="http://front.testtourchpro.com/banner4.jpg" className="img-responsive" />
+                          src="http://front.testtourchpro.com/banner4.jpg" className="img-responsive" /> */}
                       </div>
                       {/* <div className="item">
                       <img src="assets/pages/img/index-sliders/slide2.jpg" className="img-responsive" alt="Berry Lace Dress" />

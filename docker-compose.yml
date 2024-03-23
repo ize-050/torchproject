@@ -13,10 +13,7 @@
     networks:
       - main
 
-  torch-frontend:
-    # build:
-    #   context: ./docker/sercet_frontend/
-    #   dockerfile: Dockerfile
+ torch-frontend:
     image: 
     container_name: frontend
     # ports:
@@ -29,7 +26,7 @@
     networks:
       - main
       
-  networks:
+ networks:
   main:
     name: main
     driver: bridge
