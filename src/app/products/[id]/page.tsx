@@ -18,7 +18,7 @@ const ProductDetail = ({ params }: any) => {
 
     useEffect(() => {
         const Menu = async () => {
-            const menu = await axios.get('http://testtourchpro.com/api/getallMenuProducts')
+            const menu = await axios.get('http://www.testtourchpro.com/api/getallMenuProducts')
 
             const menus = menu.data;
             if (menus.length > 0) {
@@ -32,7 +32,7 @@ const ProductDetail = ({ params }: any) => {
 
     useEffect(() => {
         const ProductDetail = async () => {
-            const product_detail = await axios.get('http://testtourchpro.com/api/getProductDetail/' + params.id)
+            const product_detail = await axios.get('http://www.testtourchpro.com/api/getProductDetail/' + params.id)
             const product = product_detail.data;
             if (product) {
                 console.log('product', product)

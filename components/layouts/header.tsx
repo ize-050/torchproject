@@ -10,7 +10,7 @@ function ResponsiveAppBar() {
 
   useEffect(() => {
       const Menu = async () => {
-          const menu = await axios.get('http://testtourchpro.com/api/getallMenuProducts');
+          const menu = await axios.get('http://www.testtourchpro.com/api/getallMenuProducts');
          
           const menus = menu.data;
           if (menus.length > 0) {
