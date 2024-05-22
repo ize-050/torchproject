@@ -69,10 +69,13 @@ const RootLayout = async ({
 
       <Script src="assets/plugins/jquery.min.js" />
       <Script src="assets/plugins/jquery-migrate.min.js" />
+      <Script src="assets/plugins/fancybox/source/jquery.fancybox.js" />
+      <Script src="assets/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js" />
+      <Script src="assets/plugins/fancybox/source/helpers/jquery.fancybox-media.js" />
+      <Script src="assets/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js" />
       <Script src="assets/plugins/bootstrap/js/bootstrap.min.js" />
       <Script src="assets/corporate/scripts/back-to-top.js" />
       <Script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" />
-      <Script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js" />
       <Script src="assets/plugins/owl.carousel/owl.carousel.min.js" />
       <Script src="assets/plugins/zoom/jquery.zoom.min.js" />
       <Script src="assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" />

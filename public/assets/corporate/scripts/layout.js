@@ -212,21 +212,21 @@ var Layout = function () {
         if (!jQuery.fancybox) {
             return;
         }
-        
+        jQuery(".fancybox-button").fancybox({
+            groupAttr: 'data-rel',
+            prevEffect: 'none',
+            nextEffect: 'none',
+            closeBtn: true,
+            helpers: {
+                title: {
+                    type: 'inside'
+                }
+            }
+        });
         jQuery(".fancybox-fast-view").fancybox();
 
         if (jQuery(".fancybox-button").size() > 0) {            
-            jQuery(".fancybox-button").fancybox({
-                groupAttr: 'data-rel',
-                prevEffect: 'none',
-                nextEffect: 'none',
-                closeBtn: true,
-                helpers: {
-                    title: {
-                        type: 'inside'
-                    }
-                }
-            });
+           
 
             $('.fancybox-video').fancybox({
                 type: 'iframe'
@@ -298,12 +298,13 @@ var Layout = function () {
     return {
         init: function () {
             // init core variables
+            handleFancybox();
             handleTheme();
             handleInit();
             handleResponsiveOnResize();
             handleIEFixes();
             handleSearch();
-            handleFancybox();
+
             handleDifInits();
             handleSidebarMenu();
             handleAccordions();
@@ -507,10 +508,5 @@ $(document).ready(function() {
     Layout.initOWL();
     Layout.initImageZoom();
     Layout.initTouchspin();
-    // Layout.initSliderRange();
-    // Layout.initTouchspin();
-    // Layout.initNavScrolling();
-    // Layout.initFixHeaderWithPreHeader();
-    // Layout.gridOption1();
 
 });

@@ -86,14 +86,16 @@ const Home = () => {
 
               <div className="owl-carousel owl-carousel5 ">
                 {Product.map((product: any, key) => {
-                  console.log('product',product.images)
                   return (
                     <div key={key} className="col-md-3 col-xs-6">
                       <div className="product-item">
                         <div className="pi-img-wrapper">
-                          <Image src={product.images} className="img-responsive" alt="Berry Lace Dress" width="200" height="100" />
+                          <Image src={product.images} className="img-responsive" width="200" height="100" alt={""} />
                           <div>
-                            <a href="p3.jpg" className="btn btn-default fancybox-button">Zoom</a>
+                            <a href={product.images}  data-fancybox-group="button" className="btn btn-default fancybox-button">
+
+                              Zoom
+                            </a>
                             <a href="javascript:void(0)"
                               onClick={() => {
                                 router.push('/products/' + product.id)
@@ -122,7 +124,7 @@ const Home = () => {
                         <div className="pi-img-wrapper">
                           <Image src={product.images} className="img-responsive" alt="Berry Lace Dress" width="200" height="100" />
                           <div>
-                            <a href="p3.jpg" className="btn btn-default fancybox-button">Zoom</a>
+                            <a href={product.images} className="btn btn-default fancybox-button">Zoom</a>
                             <a href="javascript:void(0)"
                               onClick={() => {
                                 router.push('/products/' + product.id)

@@ -1,0 +1,42 @@
+/* ProductCarousel.css */
+.carousel-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .product-item {
+    position: relative;
+    display: inline-block; /* Ensures the product items are positioned side by side */
+    margin: 10px;
+  }
+  
+  .pi-img-wrapper {
+    position: relative;
+    border-radius: 8px; /* Apply border radius to the image wrapper */
+    overflow: hidden; /* Ensure image doesn't overflow its container */
+  }
+  
+  .pi-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit; /* Inherit border radius from the wrapper */
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+  }
+  
+  .product-info {
+    position: absolute;
+    top: 100%; /* Position below the image */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    display: none; /* Hidden by default */
+  }
+  
+  .product-item.active .product-info {
+    display: block; /* Show when the product item is active */
+  }

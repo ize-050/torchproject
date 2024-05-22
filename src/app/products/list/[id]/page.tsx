@@ -77,7 +77,7 @@ const ProductList = ({params}:any) => {
                     <div className="pi-img-wrapper">
                       <img src={product.images} className="img-responsive" alt="Berry Lace Dress"  />
                       <div>
-                        <a href='./p3.jpg' className="btn btn-default fancybox-button" data-fancybox="gallery">Zoom</a>
+                      <a href={product.images} className="btn btn-default fancybox-button">Zoom</a>
                         <a href="javascript:void(0)"
                         onClick={()=>{
                           router.push('/products/'+product.id)
