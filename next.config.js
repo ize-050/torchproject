@@ -6,10 +6,9 @@
 module.exports  = {
     
     images: {
-        domains: ['127.0.0.1','localhost','https://front.testtourchpro.com','https://testtourchpro.com','www.testtourchpro.com'], // Add the hostname here
+        domains: ['backoffice.amboss.cc'], // Add the hostname here
       },
     publicRuntimeConfig:{
-        katsanApi:process.env.NEXT_PUBLIC_KATSAN_API,
         katsanAuth:process.env.NEXT_PUBLIC_KATSAN_AUTH
     },
     reactStrictMode: true,

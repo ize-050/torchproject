@@ -19,7 +19,7 @@ const Home = () => {
       
     
       
-      const product = await axios.get('http://www.testtourchpro.com/api/getAllproduct'
+      const product = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllproduct`
       )
       const products = product.data;
       if (products.length > 0) {
@@ -86,6 +86,7 @@ const Home = () => {
 
               <div className="owl-carousel owl-carousel5 ">
                 {Product.map((product: any, key) => {
+                  console.log('product',product.images)
                   return (
                     <div key={key} className="col-md-3 col-xs-6">
                       <div className="product-item">

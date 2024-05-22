@@ -10,7 +10,8 @@ function ResponsiveAppBar() {
 
   useEffect(() => {
       const Menu = async () => {
-          const menu = await axios.get('http://www.testtourchpro.com/api/getallMenuProducts');
+        console.log('ddd',process.env.NEXT_PUBLIC_BACKEND_URL)
+          const menu = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getallMenuProducts`);
          
           const menus = menu.data;
           if (menus.length > 0) {
@@ -78,8 +79,11 @@ function ResponsiveAppBar() {
               </li>
             </ul>
           </li>
-          <li><a href="#">เกี่ยวกับเรา</a></li>
-          <li><a href="#" target="_blank">ติดต่อเรา</a></li>
+          <li><a href="javascript:void(0)"
+           onClick={() => {
+            router.push(`/contact`)
+          }}
+         >ติดต่อเรา</a></li>
         </ul>
       </div>
     </>

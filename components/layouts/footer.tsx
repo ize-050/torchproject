@@ -44,7 +44,7 @@ function Footer() {
                                     href="https://line.me/ti/p/~0899614778"
 
                                 >
-                                <img src="line.png" alt="line" style={{ width: "20px", height: "20px" }} />
+                                <img src="/line.png" alt="line" style={{ width: "20px", height: "20px" }} />
                                 </a>
                                 0899614778
                             </div>
@@ -55,7 +55,7 @@ function Footer() {
                                     style={{ backgroundColor: "#eee",marginRight: "10px"}}
                                     href="https://www.tiktok.com/@ratchaneesinphiban"
                                 >
-                                <img src="tictok.png" alt="line" style={{ width: "20px", height: "20px" }} />
+                                <img src="/tictok.png" alt="line" style={{ width: "20px", height: "20px" }} />
                                 </a>
                                 0899614778
                             </div>
@@ -67,7 +67,7 @@ function Footer() {
 
                         <div className="col-md-3 col-sm-6 pre-footer-col">
                             <h2>ที่อยู่</h2>
-
+                            76/1 ศิริเกษม ซอย 2 แขวงบางไผ่ เขตบางแค กรุงเทพมหานคร 10160
                         </div>
 
                     </div>

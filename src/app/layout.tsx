@@ -42,9 +42,9 @@ const RootLayout = async ({
                 </div>
                 <div className="col-md-6 col-sm-6 additional-nav">
                   <ul className="list-unstyled list-inline pull-right">
-                    <li><a href="shop-account.html">ข่าวสาร/บทความ</a></li>
-                    <li><a href="shop-account.html">เกี่ยวกับเรา</a></li>
-                    <li><a href="shop-wishlist.html">นโยบายเว็ปไซค์</a></li>
+                    <li><a href="/">หน้าแรก</a></li>
+                    <li><a href="#">สินค้า</a></li>
+                    <li><a href="contact">ติดต่อเรา</a></li>
 
                   </ul>
                 </div>
