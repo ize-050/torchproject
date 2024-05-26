@@ -8,7 +8,6 @@ const ProductList = ({params}:any) => {
 
   const [Menu, setMenu] = useState([]);
   const router = useRouter();
-
   useEffect(() => {
     const Menu = async () => {
       const menu = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getallMenuProducts`)
@@ -19,8 +18,11 @@ const ProductList = ({params}:any) => {
         setMenu(menus)
       }
     }
+    
     Menu()
   }, [])
+
+  
 
   const [Product, setProduct] = useState([]);
   useEffect(() => {
@@ -48,17 +50,23 @@ const ProductList = ({params}:any) => {
     </div>
       <div className="container">
         <ul className="breadcrumb">
-          <li><a href="index.html">หน้าแรก</a></li>
-          <li><a href="">สินค้า</a></li>
-          <li className="active">Cool green dress with red bell</li>
+          <li><a href="/">หน้าแรก</a></li>
+          <li><a href="#">สินค้า</a></li>
         </ul>
 
         <div className="row margin-bottom-40">
-          <div className="sidebar col-md-2 col-sm-5">
+          <div className="sidebar col-md-3">
             <ul className="list-group margin-bottom-25 sidebar-menu">
               {Menu.length > 0 ? Menu.map((res: any, key: number) => {
+                      // Construct the path for the menu item
+            const itemPath = `/products/list/${res.id}`;
+          
+            // let params = Number(params.id)
+            
+            const isActive = params.id == res.id;
                 return (
-                  <li key={key} className="list-group-item clearfix"><a href="javascript:void(0)"
+                  <li key={key}  className={`list-group-item clearfix ${isActive ? 'active' : ''}`}
+                  ><a href="javascript:void(0)"
                     onClick={() => {
                       router.push(`/products/list/${res.id}`)
                     }}
@@ -69,13 +77,14 @@ const ProductList = ({params}:any) => {
 
 
           </div>
-          <div className="row product-list">
+          
+          <div className="row product-list col-md-9">
             {Product.map((product: any, key: number) => {
               return (
-                <div className="col-md-3 col-sm-6 col-xs-6" key={key}>
-                  <div className="product-item col-md-12 sale-product">
+                <div className="col-md-4 col-sm-6 col-xs-6" key={key}>
+                  <div className="product-item  sale-product">
                     <div className="pi-img-wrapper">
-                      <img src={product.images} className="img-responsive" alt="Berry Lace Dress"  />
+                      <img src={product.images} className="img-responsive" alt="Berry Lace Dress" />
                       <div>
                       <a href={product.images} className="btn btn-default fancybox-button">Zoom</a>
                         <a href="javascript:void(0)"
@@ -85,17 +94,13 @@ const ProductList = ({params}:any) => {
                         className="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
-                    <h3><a href="shop-item.html">{product.name}</a></h3>
-                    <div className="pi-price">150.00</div>
+                    <h3><a href="">{product.name}</a></h3>
+                    <div className="pi-price">{product.price}</div>
                   </div>
-
                 </div>
               )
             }
             )}
-
-
-
           </div>
         </div>
       </div>

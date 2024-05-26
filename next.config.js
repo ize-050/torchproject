@@ -6,7 +6,7 @@
 module.exports  = {
     
     images: {
-        domains: ['backoffice.amboss.cc'], // Add the hostname here
+        domains: ['backoffice.amboss.cc','127.0.0.1:8000','localhost:8000','localhost','127.0.0.1'], // Add the hostname here
       },
     publicRuntimeConfig:{
         katsanAuth:process.env.NEXT_PUBLIC_KATSAN_AUTH

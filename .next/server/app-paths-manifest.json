@@ -2,7 +2,8 @@
   "/_not-found": "app/_not-found.js",
   "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
+  "/products/[id]/page": "app/products/[id]/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/products/list/[id]/page": "app/products/list/[id]/page.js",
-  "/products/[id]/page": "app/products/[id]/page.js"
+  "/products/page": "app/products/page.js"
 }

@@ -21,6 +21,30 @@ function ResponsiveAppBar() {
       }
       Menu()
   }, [])
+
+  const shuffleArray = (array:any[]) => {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  };
+
+  const getRandomProducts = (products:any, count:number) => {
+    const shuffledProducts = shuffleArray([...products]);
+    return shuffledProducts.slice(0, count);
+  };
+
   return (
     <>
     
@@ -51,7 +75,8 @@ function ResponsiveAppBar() {
                         <div key={keys} className="col-md-4 header-navigation-col">
                           <h4>{res.cat_name}</h4>
                           <ul>
-                            {res.products.length > 0 ? res.products.map((product: any, key: number) => {
+   
+                            {res.products.length > 0 ? getRandomProducts(res.products, 5).map((product, key) => {
                               return (
                                 <>
                                   <li key={key}><a

@@ -104,7 +104,7 @@ const Home = () => {
                           </div>
                         </div>
                         <h3 style={{
-                          fontSize: '16px',
+                          fontSize: '14px',
                         }}>{product.name}</h3>
                         <div className="pi-price">150.00</div>
                       </div>
@@ -119,7 +119,7 @@ const Home = () => {
                 <h2>Two items</h2>
                 {randomProducts.map((product: any, key) => {
                   return (
-                    <div key={key} className="col-md-6">
+                    <div key={key} className="col-md-6 col-xs-6 ">
                       <div className="product-item">
                         <div className="pi-img-wrapper">
                           <Image src={product.images} className="img-responsive" alt="Berry Lace Dress" width="200" height="100" />
